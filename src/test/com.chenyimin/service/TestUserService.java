@@ -24,16 +24,14 @@ public class TestUserService {
     public void hasMatchUser(){
         boolean b1 = userService.hasMatchUser("admin","123456");
         boolean b2 = userService.hasMatchUser("admin","1111");
-        System.out.println(userService.hasMatchUser("",""));
-        System.out.println(b1);
-        System.out.println(b2);
+        assertTrue(b1);
+        assertTrue(!b2);
     }
 
     @Test
     public void findUserByUserName(){
         User user = userService.findUserNames("admin");
         assertEquals(user.getUserName(), "admin");
-        System.out.println(user.getUserName());
     }
 
     @Test
