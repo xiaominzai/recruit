@@ -11,6 +11,6 @@
     <title>论坛</title>
 </head>
 <body>
-${user.userName},欢迎您登录论坛，您当前积分为${user.credits};
+${user.userName},欢迎您登录论坛;
 </body>
 </html>

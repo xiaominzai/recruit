@@ -26,7 +26,6 @@ public class UserService {
     }
 
     public void loginSuccess(User user){
-        user.setCredits( 5 + user.getCredits());
         LoginLog loginLog = new LoginLog();
         loginLog.setUserId(user.getUserId());
         loginLog.setIp(user.getLastIp());

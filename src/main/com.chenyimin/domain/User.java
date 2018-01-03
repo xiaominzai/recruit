@@ -7,7 +7,6 @@ public class User  implements Serializable{
     private int userId;
     private String userName;
     private String password;
-    private int credits;
     private String lastIp;
     private Date lastVisit;
 
@@ -33,14 +32,6 @@ public class User  implements Serializable{
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public int getCredits() {
-        return credits;
-    }
-
-    public void setCredits(int credits) {
-        this.credits = credits;
     }
 
     public String getLastIp() {
