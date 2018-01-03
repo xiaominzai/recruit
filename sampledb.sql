@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2018-01-03 03:21:55
+-- Generation Time: 2018-01-03 17:51:40
 -- 服务器版本： 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -61,7 +61,11 @@ INSERT INTO `t_login_log` (`login_log_id`, `user_id`, `ip`, `login_datetime`) VA
 (21, 1, '0:0:0:0:0:0:0:1', '2018-01-02 14:32:57'),
 (22, 1, '0:0:0:0:0:0:0:1', '2018-01-03 09:06:50'),
 (23, 1, '0:0:0:0:0:0:0:1', '2018-01-03 09:07:34'),
-(24, 1, '0:0:0:0:0:0:0:1', '2018-01-03 09:25:19');
+(24, 1, '0:0:0:0:0:0:0:1', '2018-01-03 09:25:19'),
+(25, 1, '0:0:0:0:0:0:0:1', '2018-01-03 17:02:37'),
+(26, 1, '127.0.0.1', '2018-01-03 22:34:11'),
+(27, 1, '127.0.0.1', '2018-01-03 22:38:50'),
+(28, 1, '127.0.0.1', '2018-01-03 23:34:42');
 
 -- --------------------------------------------------------
 
@@ -92,9 +96,9 @@ INSERT INTO `t_resume` (`id`, `email`, `detail`, `userid`) VALUES
 CREATE TABLE `t_user` (
   `user_id` int(11) NOT NULL,
   `user_name` varchar(30) NOT NULL,
-  `credits` int(11) NOT NULL,
-  `password` varchar(32) NOT NULL,
-  `last_visit` datetime NOT NULL,
+  `credits` int(11) NOT NULL DEFAULT '0',
+  `password` char(80) NOT NULL,
+  `last_visit` datetime DEFAULT NULL,
   `last_ip` varchar(23) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -103,7 +107,7 @@ CREATE TABLE `t_user` (
 --
 
 INSERT INTO `t_user` (`user_id`, `user_name`, `credits`, `password`, `last_visit`, `last_ip`) VALUES
-(1, 'admin', 105, '21232F297A57A5A743894A0E4A801FC3', '2018-01-03 09:25:19', '0:0:0:0:0:0:0:1');
+(1, 'admin', 105, 'e72359b9fbcd4f66e5c35a3e0b707c375d37916e8284c778f4863417992b79574bf0202468649501', '2018-01-03 23:34:42', '127.0.0.1');
 
 --
 -- Indexes for dumped tables
@@ -135,7 +139,7 @@ ALTER TABLE `t_user`
 -- 使用表AUTO_INCREMENT `t_login_log`
 --
 ALTER TABLE `t_login_log`
-  MODIFY `login_log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `login_log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- 使用表AUTO_INCREMENT `t_resume`
 --
@@ -145,7 +149,7 @@ ALTER TABLE `t_resume`
 -- 使用表AUTO_INCREMENT `t_user`
 --
 ALTER TABLE `t_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

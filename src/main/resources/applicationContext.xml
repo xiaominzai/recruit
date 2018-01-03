@@ -11,6 +11,7 @@
        default-lazy-init="true" default-autowire="byName" default-init-method="" default-destroy-method="">
     <context:component-scan base-package="dao"/>
     <context:component-scan base-package="service"/>
+    <context:component-scan base-package="units"/>
     <!--定义一个DBCP实现的数据源-->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
           p:driverClassName="com.mysql.jdbc.Driver"
@@ -33,4 +34,6 @@
             <tx:method name="*"/>
         </tx:attributes>
     </tx:advice>
+    <!--注入密码加密类，可以选择-->
+    <!--<bean id="ase" class="units.Security"></bean>-->
 </beans>

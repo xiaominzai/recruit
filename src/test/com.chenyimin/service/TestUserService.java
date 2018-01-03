@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import service.UserService;
+import units.Ip;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 import static org.junit.Assert.*;
@@ -19,13 +21,18 @@ public class TestUserService {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private Ip ip;
 
     @Test
     public void hasMatchUser(){
-        boolean b1 = userService.hasMatchUser("admin","123456");
+        boolean b1 = userService.hasMatchUser("admin","admin");
         boolean b2 = userService.hasMatchUser("admin","1111");
+        boolean b3 = userService.hasMatchUser("aaa","123");
         assertTrue(b1);
         assertTrue(!b2);
+        assertTrue(!b3);
+
     }
 
     @Test
@@ -41,5 +48,15 @@ public class TestUserService {
         user.setLastVisit(new Date());
 
         userService.loginSuccess(user);
+    }
+
+    @Test
+    public void registerUser(){
+        User user = new User();
+        user.setUserName("啊狗");
+        user.setPassword("admin");
+        user.setLastIp("127.0.0.1");
+        boolean b1 = userService.registerUser(user);
+        assertTrue(b1);
     }
 }
