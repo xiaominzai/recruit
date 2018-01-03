@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2018-01-02 14:21:16
+-- Generation Time: 2018-01-03 03:21:55
 -- 服务器版本： 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -58,7 +58,30 @@ INSERT INTO `t_login_log` (`login_log_id`, `user_id`, `ip`, `login_datetime`) VA
 (18, 1, '0:0:0:0:0:0:0:1', '2018-01-02 14:25:23'),
 (19, 1, '0:0:0:0:0:0:0:1', '2018-01-02 14:25:26'),
 (20, 1, '0:0:0:0:0:0:0:1', '2018-01-02 14:30:07'),
-(21, 1, '0:0:0:0:0:0:0:1', '2018-01-02 14:32:57');
+(21, 1, '0:0:0:0:0:0:0:1', '2018-01-02 14:32:57'),
+(22, 1, '0:0:0:0:0:0:0:1', '2018-01-03 09:06:50'),
+(23, 1, '0:0:0:0:0:0:0:1', '2018-01-03 09:07:34'),
+(24, 1, '0:0:0:0:0:0:0:1', '2018-01-03 09:25:19');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `t_resume`
+--
+
+CREATE TABLE `t_resume` (
+  `id` int(11) NOT NULL COMMENT '自增id',
+  `email` varchar(60) NOT NULL COMMENT '邮件地址',
+  `detail` varchar(255) NOT NULL COMMENT '简历url地址',
+  `userid` int(11) NOT NULL COMMENT '用户id'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='简历表';
+
+--
+-- 转存表中的数据 `t_resume`
+--
+
+INSERT INTO `t_resume` (`id`, `email`, `detail`, `userid`) VALUES
+(3, '这是一个邮箱', '这是一个url', 1);
 
 -- --------------------------------------------------------
 
@@ -80,7 +103,7 @@ CREATE TABLE `t_user` (
 --
 
 INSERT INTO `t_user` (`user_id`, `user_name`, `credits`, `password`, `last_visit`, `last_ip`) VALUES
-(1, 'admin', 105, '123456', '2018-01-02 14:32:57', '0:0:0:0:0:0:0:1');
+(1, 'admin', 105, '21232F297A57A5A743894A0E4A801FC3', '2018-01-03 09:25:19', '0:0:0:0:0:0:0:1');
 
 --
 -- Indexes for dumped tables
@@ -91,6 +114,12 @@ INSERT INTO `t_user` (`user_id`, `user_name`, `credits`, `password`, `last_visit
 --
 ALTER TABLE `t_login_log`
   ADD PRIMARY KEY (`login_log_id`);
+
+--
+-- Indexes for table `t_resume`
+--
+ALTER TABLE `t_resume`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `t_user`
@@ -106,7 +135,12 @@ ALTER TABLE `t_user`
 -- 使用表AUTO_INCREMENT `t_login_log`
 --
 ALTER TABLE `t_login_log`
-  MODIFY `login_log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `login_log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+--
+-- 使用表AUTO_INCREMENT `t_resume`
+--
+ALTER TABLE `t_resume`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id', AUTO_INCREMENT=4;
 --
 -- 使用表AUTO_INCREMENT `t_user`
 --
