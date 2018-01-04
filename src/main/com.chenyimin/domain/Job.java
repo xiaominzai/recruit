@@ -7,7 +7,6 @@ public class Job implements Serializable {
     private String jobname;
     private String img;
     private String title;
-    private String fu_title;
     private String address;
 
     public int getId() {
@@ -42,13 +41,6 @@ public class Job implements Serializable {
         this.title = title;
     }
 
-    public String getFu_title() {
-        return fu_title;
-    }
-
-    public void setFu_title(String fu_title) {
-        this.fu_title = fu_title;
-    }
 
     public String getAddress() {
         return address;

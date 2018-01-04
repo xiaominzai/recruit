@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2018-01-04 15:06:18
+-- Generation Time: 2018-01-04 15:42:52
 -- 服务器版本： 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -31,9 +31,20 @@ CREATE TABLE `t_job` (
   `jobname` varchar(30) DEFAULT NULL,
   `img` varchar(255) NOT NULL,
   `title` varchar(30) NOT NULL,
-  `fu_titile` varchar(60) NOT NULL,
   `address` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='工作表';
+
+--
+-- 转存表中的数据 `t_job`
+--
+
+INSERT INTO `t_job` (`id`, `jobname`, `img`, `title`, `address`) VALUES
+(1, '产品文案', 'images/a1.jpg', '2年工作经验 · 2017/12/20', '广东省广州市天河区东方一路36号（原108号）军事管理区大院12号库4号门'),
+(2, '证券客户经理', 'images/a2.jpg', '经验不限 · 2017/12/23', '龙岗区星河world'),
+(3, '销售工程师', 'images/a3.jpg', '2年以上经验 · 2017/12/26', '南开区新技术产业园区海泰信息广场F座南楼710'),
+(4, '品质总监', 'images/a4.jpg', '5年经验以上 · 2017/12/28', '上海市奉贤区青村镇333号'),
+(5, '区域销售主管', 'images/a5.jpg', '5年以上经验 · 2017/12/30', '广州天河北路689号光大银行大厦25楼E1'),
+(6, '投资/理财顾问/机构业务', 'images/a6.jpg', '1年经验以上 · 2018/01/01', '徐汇区广元西路55号浩然高科技大厦1502室、1102室');
 
 -- --------------------------------------------------------
 
@@ -173,7 +184,7 @@ ALTER TABLE `t_user`
 -- 使用表AUTO_INCREMENT `t_job`
 --
 ALTER TABLE `t_job`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- 使用表AUTO_INCREMENT `t_login_log`
 --

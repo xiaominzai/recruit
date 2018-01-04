@@ -13,25 +13,29 @@ public class JobService {
     @Autowired
     private JobDao jobDao;
 
-    /**
-     * 删除工作
-     * @param id 删除的主键
-     * @return
-     */
-    public boolean deleteJob(int id){
-        return jobDao.delete(id) > 0;
-    }
+//    /**
+//     * 删除工作
+//     * @param id 删除的主键
+//     * @return
+//     */
+//    public boolean deleteJob(int id){
+//        return jobDao.delete(id) > 0;
+//    }
 
+    /**
+     * 查找所有的工作
+     * @return 工作List对象
+     */
     public List<Job> queryAllJob(){
         return jobDao.queryAll();
     }
 
-    public boolean updateJob(Job job){
-        return jobDao.update(job) > 0;
-    }
-
-    public boolean addJob(Job job){
-        return jobDao.insert(job) > 0;
-    }
+//    public boolean updateJob(Job job){
+//        return jobDao.update(job) > 0;
+//    }
+//
+//    public boolean addJob(Job job){
+//        return jobDao.insert(job) > 0;
+//    }
 
 }
