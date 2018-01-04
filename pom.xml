@@ -152,6 +152,7 @@
           <version>2.5</version>
           <scope>provided</scope>
       </dependency>
+
   </dependencies>
   <build>
     <finalName>spring-login</finalName>
@@ -166,4 +167,5 @@
           </plugin>
       </plugins>
   </build>
+
 </project>

@@ -9,8 +9,6 @@ public class User  implements Serializable{
     private String password;
     private String lastIp;
     private Date lastVisit;
-    private String firstName;
-    private String lastName;
     private String phone;
     private String sex;
     private String dob;
@@ -58,22 +56,6 @@ public class User  implements Serializable{
 
     public void setLastVisit(Date lastVisit) {
         this.lastVisit = lastVisit;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getPhone() {
