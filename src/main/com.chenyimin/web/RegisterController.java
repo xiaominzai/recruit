@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 import service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 
 @Controller
 public class RegisterController {
@@ -16,6 +17,8 @@ public class RegisterController {
 
     @RequestMapping("register_click.html")
     public ModelAndView RegisterPage(HttpServletRequest request, User user) {
+        user.setLastIp("127.0.0.1");
+        user.setLastVisit(new Date());
         boolean isInsert = userService.registerUser(user);
         if (isInsert == true) {
             return new ModelAndView("index");

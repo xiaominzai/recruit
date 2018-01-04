@@ -54,7 +54,7 @@ public class TestUserService {
         user_name, password,last_ip, phone, sex, dob, email, country, work_time, jiaoyu, self_me
          */
         User user = new User();
-        user.setUserName("啊狗");
+        user.setUserName("啊狗aaaa");
         user.setPassword("admin");
         user.setLastIp("127.0.0.1");
         user.setPhone("66666");

@@ -86,20 +86,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <font color="red"><c:out value="${error}"/></font>
             </c:if>
             <form action="<c:url value="/register_click.html" />" method="post">
-                <%--<div class="row">--%>
-                    <%--<div class="form-group col-md-12">--%>
-                        <%--<label class="col-md-3 control-lable" >名字</label>--%>
-                        <%--<div class="col-md-9">--%>
-                            <%--<input type="text"  name="firstName"--%>
-                                   <%--class="form-control input-sm"/>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" >姓名</label>
+                        <label class="col-md-3 control-lable">姓名</label>
                         <div class="col-md-9">
-                            <input type="text"  name="userName"
+                            <input type="text" name="userName"
+                                   class="form-control input-sm"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label class="col-md-3 control-lable">密码</label>
+                        <div class="col-md-9">
+                            <input type="password" name="password"
                                    class="form-control input-sm"/>
                         </div>
                     </div>
@@ -145,7 +145,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" >国家</label>
+                        <label class="col-md-3 control-lable">国家</label>
                         <div class="col-md-9">
                             <select path="country" name="country" class="form-control input-sm">
                                 <option value="">选择</option>
@@ -181,7 +181,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" >工作经验</label>
+                        <label class="col-md-3 control-lable">工作经验</label>
                         <div class="col-md-9">
                             <select path="country" name="work_time" class="form-control input-sm">
                                 <option value="">选择</option>
