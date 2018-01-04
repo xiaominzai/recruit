@@ -45,7 +45,7 @@ public class LoginController {
             user.setLastVisit(new Date());
             userService.loginSuccess(user);
             request.getSession().setAttribute("user", user);
-            return new ModelAndView("main");
+            return new ModelAndView("index");
         }
     }
 }

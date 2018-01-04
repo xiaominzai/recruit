@@ -86,29 +86,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <font color="red"><c:out value="${error}"/></font>
             </c:if>
             <form action="<c:url value="/register_click.html" />" method="post">
+                <%--<div class="row">--%>
+                    <%--<div class="form-group col-md-12">--%>
+                        <%--<label class="col-md-3 control-lable" >名字</label>--%>
+                        <%--<div class="col-md-9">--%>
+                            <%--<input type="text"  name="firstName"--%>
+                                   <%--class="form-control input-sm"/>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="firstName">名字</label>
+                        <label class="col-md-3 control-lable" >姓名</label>
                         <div class="col-md-9">
-                            <input type="text" path="firstName" id="firstName" name="firstName"
+                            <input type="text"  name="userName"
                                    class="form-control input-sm"/>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="lastName">姓</label>
+                        <label class="col-md-3 control-lable">手机号码</label>
                         <div class="col-md-9">
-                            <input type="text" path="lastName" id="lastName" name="lastName"
-                                   class="form-control input-sm"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="lastName">手机号码</label>
-                        <div class="col-md-9">
-                            <input type="text" path="lastName" id="phone" name="phone" class="form-control input-sm"/>
+                            <input type="text" path="lastName" name="phone" class="form-control input-sm"/>
                         </div>
                     </div>
                 </div>
