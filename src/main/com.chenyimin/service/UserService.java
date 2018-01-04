@@ -20,7 +20,7 @@ public class UserService {
     private Encryption encryption;
 
     /**
-     * 判断用户名和密码是否正确
+     * 判断用户名和密码是否正确,用于登陆
      * @param userName 用户名
      * @param password 密码
      * @return

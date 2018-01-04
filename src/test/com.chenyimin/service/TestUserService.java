@@ -21,8 +21,6 @@ public class TestUserService {
 
     @Autowired
     private UserService userService;
-    @Autowired
-    private Ip ip;
 
     @Test
     public void hasMatchUser(){
@@ -44,7 +42,7 @@ public class TestUserService {
     @Test
     public void loginSuccess(){
         User user = userService.findUserNames("admin");
-        user.setLastIp("127.0.0.1");
+        user.setLastIp("127.0.0.2");
         user.setLastVisit(new Date());
 
         userService.loginSuccess(user);
@@ -52,11 +50,28 @@ public class TestUserService {
 
     @Test
     public void registerUser(){
+        /*
+        user_name, password,last_ip, phone, sex, dob, email, country, work_time, jiaoyu, self_me
+         */
         User user = new User();
         user.setUserName("啊狗");
         user.setPassword("admin");
         user.setLastIp("127.0.0.1");
+        user.setPhone("66666");
+        user.setSex("男");
+        user.setDob("我？");
+        user.setEmail("哈哈");
+        user.setCountry("国家？");
+        user.setWork_time("工作时间");
+        user.setJiaoyu("教育");
+        user.setSelf_me("self+me");
         boolean b1 = userService.registerUser(user);
         assertTrue(b1);
     }
+
+
+
+
+
+
 }

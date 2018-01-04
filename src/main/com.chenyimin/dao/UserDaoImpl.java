@@ -2,11 +2,9 @@ package dao;
 
 import domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.stereotype.Repository;
-import units.Encryption;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -49,15 +47,18 @@ public class UserDaoImpl implements UserDao{
     }
 
     /**
-     * 插入用户（有bug）
+     * 插入用户
      * @param user
      * @return 插入影响列
      */
     @Override
-    public int insertUser(User user) {
-        String sqlStr = " INSERT INTO t_user(user_name, password,last_ip)  VALUES (user_name=?,password=?,last_ip=?)";
-        Object[] args = {user.getUserName(),user.getPassword(),user.getLastIp()};
-        System.out.println(args[1]);
-        return jdbcTemplate.update(sqlStr,args);
+    public int insertUser(final User user) {
+        final String sqlStr = " INSERT INTO t_user( user_name, password, " +
+                " last_ip, phone, sex, dob, email, country, work_time, jiaoyu, self_me)  " +
+                " VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        Object[] args = new Object[]{user.getUserName(),user.getPassword(),user.getLastIp(),
+                user.getPhone(), user.getSex(), user.getDob(), user.getEmail(), user.getCountry(),
+                user.getWork_time(), user.getJiaoyu(), user.getSelf_me()};
+        return jdbcTemplate.update(sqlStr, args);
     }
 }
