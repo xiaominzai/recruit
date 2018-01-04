@@ -15,13 +15,9 @@
 <c:if test="${!empty error}">
     <font color="red"><c:out value="${error}"/></font>
 </c:if>
-<form action="<c:url value="/loginCheck.html" />" method="post">
-    <label for="">用户名</label>
-    <input type="text" name="userName">
-    <br>
-    <label for="">密码</label>
-    <input type="text" name="password">
-    <br>
+<form action="<c:url value="/jianli.html" />" method="post">
+    <input type="text" name="name">
+    <input type="file" name="file">
     <input type="submit" value="登录" />
     <input type="reset" value="重置">
     <img src="${pageContext.request.contextPath}img/aaa.png" alt="">

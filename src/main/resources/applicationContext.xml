@@ -15,19 +15,28 @@
     <!--定义一个DBCP实现的数据源-->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
           p:driverClassName="com.mysql.jdbc.Driver"
-    p:url="jdbc:mysql://localhost:3306/sampledb?characterEncoding=utf8"
-    p:username="root"
-    p:password=""/>
+          p:url="jdbc:mysql://localhost:3306/sampledb?characterEncoding=utf8"
+          p:username="root"
+          p:password=""/>
 
     <!--定义jdbc模板bean-->
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" p:dataSource-ref="dataSource"/>
     <!--配置事务管理器-->
     <bean id="transactionManger" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
           p:dataSource-ref="dataSource"/>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="104857600"/>
+        <property name="maxInMemorySize" value="4096"/>
+        <property name="defaultEncoding" value="UTF-8"></property>
+    </bean>
+
+
+
     <!--通过aop配置提供事务增强，让service包下的所有bean都拥有事务-->
     <aop:config proxy-target-class="true">
         <aop:pointcut id="serviceMethod" expression="execution(* service..*(..))"/>
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethod" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethod"/>
     </aop:config>
     <tx:advice id="txAdvice" transaction-manager="transactionManger">
         <tx:attributes>
