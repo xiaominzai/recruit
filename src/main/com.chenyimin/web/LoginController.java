@@ -5,6 +5,7 @@ import domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import service.UserService;
 
@@ -19,11 +20,20 @@ public class LoginController {
 
     @RequestMapping(value = "index.html")
     public String loginPage(){
-        return "login";
+        return "index";
+    }
+    @RequestMapping(value = "resume.html")
+    public String resumePage(){
+        return "resume";
+    }
+    @RequestMapping(value = "register.html")
+    public String registerPage(){
+        return "register";
     }
 
     @RequestMapping(value = "loginCheck.html")
     public ModelAndView loginCheck(HttpServletRequest request, LoginCommand loginCommand){
+//        request.getParameter("")
         boolean isValidUser = userService.hasMatchUser(loginCommand.getUserName(), loginCommand.getPassword());
         if (!isValidUser){
             return new ModelAndView("login","error","用户名或密码错误");
