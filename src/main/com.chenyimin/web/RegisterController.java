@@ -15,7 +15,7 @@ public class RegisterController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("register_click.html")
+    @RequestMapping(value = "register_click.html")
     public ModelAndView RegisterPage(HttpServletRequest request, User user) {
         user.setLastIp("127.0.0.1");
         user.setLastVisit(new Date());

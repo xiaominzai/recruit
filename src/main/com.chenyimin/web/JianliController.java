@@ -54,7 +54,6 @@ public class JianliController {
                 u.setEmail(name);
                 u.setDetail(request.getContextPath() + "/images/" + targetFileName);
                 service.insertResume(u);
-                System.out.println("=============" + request.getContextPath() + "/images/" + targetFileName);
             }
 
             return new ModelAndView("resume", "error", "上传成功");

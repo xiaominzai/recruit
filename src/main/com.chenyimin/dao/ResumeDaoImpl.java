@@ -16,8 +16,8 @@ public class ResumeDaoImpl implements ResumeDao{
      * @param resume
      */
     public int insertResume(Resume resume){
-        String sqlStr = " INSERT INTO t_resume(email, detail, userid) VALUES (?, ?, ?) ";
-        Object[] args = {resume.getEmail(), resume.getDetail(), resume.getUserid()};
+        String sqlStr = " INSERT INTO t_resume(email, detail) VALUES (?, ?) ";
+        Object[] args = {resume.getEmail(), resume.getDetail()};
         return jdbcTemplate.update(sqlStr, args);
     }
 

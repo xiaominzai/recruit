@@ -91,7 +91,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <label class="col-md-3 control-lable">姓名</label>
                         <div class="col-md-9">
                             <input type="text" name="userName"
-                                   class="form-control input-sm"/>
+                                   class="form-control input-sm" required/>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <label class="col-md-3 control-lable">密码</label>
                         <div class="col-md-9">
                             <input type="password" name="password"
-                                   class="form-control input-sm"/>
+                                   class="form-control input-sm" required/>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable">手机号码</label>
                         <div class="col-md-9">
-                            <input type="text" path="lastName" name="phone" class="form-control input-sm"/>
+                            <input type="text" path="lastName" name="phone" class="form-control input-sm" required/>
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="col-md-9" class="form-control input-sm">
                             <div class="radios">
                                 <label class="label_radio">
-                                    <input type="radio" name="sex" value="男" checked=""> 男
+                                    <input type="radio" name="sex" value="男" checked="" > 男
                                 </label>
                                 <label class="label_radio">
                                     <input value="女" name="sex" type="radio"> 女
@@ -131,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable">出生日期</label>
                         <div class="col-md-9">
-                            <input type="text" path="dob" name="dob" class="form-control input-sm"/>
+                            <input type="text" path="dob" name="dob" class="form-control input-sm" required/>
                         </div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable">电子邮箱</label>
                         <div class="col-md-9">
-                            <input type="text" path="email" name="email" class="form-control input-sm"/>
+                            <input type="text" path="email" name="email" class="form-control input-sm" required/>
                         </div>
                     </div>
                 </div>
@@ -148,7 +148,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <label class="col-md-3 control-lable">国家</label>
                         <div class="col-md-9">
                             <select path="country" name="country" class="form-control input-sm">
-                                <option value="">选择</option>
+                                <option value="中国">选择</option>
                                 <option value="日本">日本</option>
                                 <option value="肯尼亚">肯尼亚</option>
                                 <option value=迪拜"">迪拜</option>
@@ -184,7 +184,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <label class="col-md-3 control-lable">工作经验</label>
                         <div class="col-md-9">
                             <select path="country" name="work_time" class="form-control input-sm">
-                                <option value="">选择</option>
+                                <option value="中国">选择</option>
                                 <option value="新人">新人</option>
                                 <option value="1年">1年</option>
                                 <option value="2年">2年</option>
@@ -201,7 +201,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <label class="col-md-3 control-lable">教育</label>
                         <div class="col-md-9">
                             <select path="country" name="jiaoyu" class="form-control input-sm">
-                                <option value="">选择</option>
+                                <option value="Bsc">选择</option>
                                 <option value="Bsc">Bsc</option>
                                 <option value="技术学术">技术学术</option>
                                 <option value="Mca">Mca</option>
@@ -217,7 +217,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <label class="col-md-3 control-lable">自我介绍</label>
                         <div class="col-md-9 sm_1">
                             <textarea name="self_me" cols="77" rows="6" value=" " onfocus="this.value='';"
-                                      onblur="if (this.value == '') {this.value = '';}"> </textarea>
+                                      onblur="if (this.value == '') {this.value = '';}" required> </textarea>
 
                         </div>
                     </div>

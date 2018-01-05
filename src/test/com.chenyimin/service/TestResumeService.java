@@ -19,7 +19,6 @@ public class TestResumeService {
     @Test
     public void insertResume(){
         Resume resume = new Resume();
-        resume.setUserid(1);
         resume.setDetail("这是一个url");
         resume.setEmail("这是一个邮箱");
         boolean b1 = resumeService.insertResume(resume);

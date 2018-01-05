@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="#">医疗·化工</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html">登陆</a></li>
+                <li><a href="login1.html">登陆</a></li>
                 <li><a href="resume.html">上传简历</a></li>
             </ul>
         </div>
@@ -101,10 +101,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="col-md-3 grid_3">
             <h4>导航</h4>
             <ul class="f_list f_list1">
-                <li><a href="index.html">主页面</a></li>
-                <li><a href="login.html">登陆</a></li>
-                <li><a href="login.html">加入我们</a></li>
-                <li><a href="about.html">关于我们</a></li>
+                <li><a href="#">主页面</a></li>
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">加入我们</a></li>
+                <li><a href="#">关于我们</a></li>
             </ul>
             <ul class="f_list">
                 <li><a href="#">详情</a></li>

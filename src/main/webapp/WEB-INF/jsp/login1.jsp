@@ -38,7 +38,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.jsp"><img src="images/logo.png" alt=""/></a>
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""/></a>
         </div>
         <!--/.navbar-header-->
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
@@ -146,10 +146,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="col-md-3 grid_3">
             <h4>导航</h4>
             <ul class="f_list f_list1">
-                <li><a href="index.jsp">主页面</a></li>
-                <li><a href="login.jsp">登陆</a></li>
-                <li><a href="login.jsp">加入我们</a></li>
-                <li><a href="about.jsp">关于我们</a></li>
+                <li><a href="#">主页面</a></li>
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">加入我们</a></li>
+                <li><a href="#">关于我们</a></li>
             </ul>
             <ul class="f_list">
                 <li><a href="#">详情</a></li>

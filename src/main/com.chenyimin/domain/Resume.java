@@ -4,7 +4,6 @@ public class Resume {
     private int id;
     private String email;
     private String detail;
-    private int userid;
 
     public int getId() {
         return id;
@@ -30,11 +29,4 @@ public class Resume {
         this.detail = detail;
     }
 
-    public int getUserid() {
-        return userid;
-    }
-
-    public void setUserid(int userid) {
-        this.userid = userid;
-    }
 }
